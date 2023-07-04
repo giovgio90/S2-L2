@@ -45,20 +45,26 @@ console.log(condizioneVerificata ? "Condizione verificata" : "Condizione non ver
 */
 
 const totalShoppingCart = 60;
-const shippingCost = 10;
-const checkoutAmount = 0;
+const checkoutAmount = totalShoppingCart < 50 ? totalShoppingCart : totalShoppingCart + 10;
 
-if (totalShoppingCart < 50) {
-  shippingCost = 0;
-}
-
-checkoutAmount = totalShoppingCart + shippingCost;
-console.log("Ammontare totale da addebitare all'utente per il checkout: " + checkoutAmount);
+console.log("Ammontare totale da addebitare all'utente per il checkout:", checkoutAmount);
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
+
+const totalShopCart = 40;
+const discountPerc = 0.2;
+const shippingCost = totalShopCart > 50 ? 0 : 10;
+
+const discount = totalShopCart * discountPerc;
+const checkOutAmount = totalShoppingCart - discount + shippingCost;
+
+console.log("Totale del carrello:", totalShopCart);
+console.log("Sconto applicato:", discount);
+console.log("Ammontare totale da addebitare all'utente per il checkout:", checkOutAmount);
+console.log("Costo di spedizione:", shippingCost);
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -152,8 +158,23 @@ console.log(me);
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
+const boxArray = [];
+
+boxArray.push(1);
+boxArray.push(2);
+boxArray.push(3);
+boxArray.push(4);
+boxArray.push(5);
+boxArray.push(6);
+boxArray.push(7);
+boxArray.push(8);
+boxArray.push(9);
+boxArray.push(10);
+
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+boxArray.splice(boxArray.length - 1, 1, 100);
+
+console.log(boxArray);
