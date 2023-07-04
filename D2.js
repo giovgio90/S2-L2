@@ -4,7 +4,6 @@
 
 const numero1 = 10;
 const numero2 = 5;
-
 const numeroPiuGrande = numero1 > numero2 ? numero1 : numero2;
 
 console.log(numeroPiuGrande + " è il numero più grande");
@@ -35,7 +34,7 @@ console.log(risultato);
 const numero4 = 5;
 const numero5 = 3;
 
-const condizioneVerificata = numero4 + numero5 === 8 || numero4 - numero5 === 8 || numero5 - numero4 === 8;
+const condizioneVerificata = numero4 - numero5 === 8 || numero5 - numero4 === 8 || numero4 + numero5 === 8;
 
 console.log(condizioneVerificata ? "Condizione verificata" : "Condizione non verificata");
 
@@ -44,6 +43,17 @@ console.log(condizioneVerificata ? "Condizione verificata" : "Condizione non ver
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
+
+const totalShoppingCart = 60;
+const shippingCost = 10;
+const checkoutAmount = 0;
+
+if (totalShoppingCart < 50) {
+  shippingCost = 0;
+}
+
+checkoutAmount = totalShoppingCart + shippingCost;
+console.log("Ammontare totale da addebitare all'utente per il checkout: " + checkoutAmount);
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
